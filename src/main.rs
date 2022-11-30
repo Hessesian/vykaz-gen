@@ -16,9 +16,6 @@ fn main() -> Result<(), Error> {
     let name = Regex::new(r"^[A-Z][a-z]* [A-Z][a-z]*$").unwrap();
     let hours = Regex::new(r"^\d+$").unwrap();
 
-    for line in lines.clone() {
-        println!("{}", line);
-    }
     let iter = lines
         .map(|l| l.replace("\n\n", ""))
         .skip_while(|l| !l.contains("Summary of Worklogs"))
@@ -27,7 +24,6 @@ fn main() -> Result<(), Error> {
     let mut names = iter.clone().filter(|l| name.is_match(l));
     let mut dates = iter.clone().filter(|l| date.is_match(l));
     let mut hours = iter.clone().filter(|l| hours.is_match(l));
-    print!("{}", &iter.clone().collect::<String>());
     loop {
         let Some(date)= dates.next() else {
             break;

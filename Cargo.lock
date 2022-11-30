@@ -24,14 +24,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
 
 [[package]]
-name = "pdf"
-version = "0.1.0"
-dependencies = [
- "pdftotext",
- "regex",
-]
-
-[[package]]
 name = "pdftotext"
 version = "0.2.1"
 source = "git+https://github.com/QPixel/pdftotext.git#d3f699e48c801b8429e28d6ea77b2e0a0d1e62ad"
@@ -62,3 +54,11 @@ name = "regex-syntax"
 version = "0.6.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "456c603be3e8d448b072f410900c09faf164fbce2d480456f50eea6e25f9c848"
+
+[[package]]
+name = "vykazy"
+version = "0.1.0"
+dependencies = [
+ "pdftotext",
+ "regex",
+]

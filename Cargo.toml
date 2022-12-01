@@ -6,5 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-pdftotext = { git = "https://github.com/QPixel/pdftotext.git" }
 regex = "1"
+pdf-extract = { git = "https://github.com/Hessesian/pdf-extract.git" }
